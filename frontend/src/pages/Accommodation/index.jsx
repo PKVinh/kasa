@@ -9,6 +9,8 @@ import styles from "./Accomodation.module.css";
 const Accommodation = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
   const navigate = useNavigate(); // Permet la redirection
+  
+  //Initialisation des state
   const [accomodation, setAccomodation] = useState(null);
   const [error, setError] = useState(null);
   const [equipments, setEquipments] = useState([]);

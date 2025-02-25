@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from "./Slideshow.module.css"
 
 function Slideshow({pictures}) {
-
+  // Initialisation du state
   const [index, setIndex] = useState(0)
 
   const previousSlide = () => {

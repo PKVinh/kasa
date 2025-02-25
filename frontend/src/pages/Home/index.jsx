@@ -5,8 +5,10 @@ import Card from "../../components/Card"
 import styles from "./home.module.css"
 
 function Home() {
+    // Initialisation du state
     const [accommodations, setAccomodations] = useState([])
 
+    // Mise à jour du state
     useEffect( ()=>{
         fetch("http://localhost:8080/api/properties")
         .then((response) => response.json())
@@ -25,7 +27,6 @@ function Home() {
                     <Card key={accommodation.id} title={accommodation.title} image={accommodation.cover} id={accommodation.id}/>
                 ))}
             </div>
-            
         </main>
     );
 }

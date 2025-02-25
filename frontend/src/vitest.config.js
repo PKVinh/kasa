@@ -5,9 +5,9 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom', // Simule le DOM pour les tests
-    setupFiles: './setupTests.js', // Optionnel, pour configurer Jest-DOM
-    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'] // Ajoute cette ligne !
+    environment: 'jsdom',
+    setupFiles: './setupTests.js', 
+    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'] 
   }
 });
 
