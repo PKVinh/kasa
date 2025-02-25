@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.header img{
+    width: 18%;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+.activeLink {
+    text-decoration: underline;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+/****** Media queries ***********/
+/* Small devices (phones, less than 768px) */
+
+@media screen and (min-width: 330px) and (max-width: 768px) {
+    .header{
+        width: 95%;
+        margin: 15px 0;
+    }
+    
+    .link, .activeLink{
+        font-size: 12px;
+        margin-left: 25px;
+        text-transform: uppercase;
+    }
+    
+
+    .header img{
+        width: 40%;
+    }
+}

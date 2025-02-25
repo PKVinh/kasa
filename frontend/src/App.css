@@ -1,0 +1,41 @@
+:root {
+  --main-color: #FF6060;
+  --main-bg-color: #F6F6F6;
+  --main-img-color: #000000;  
+  --main-img-text-color: #FFFFFF;  
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden; /* Évite le scroll horizontal */
+}
+
+
+.container {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 1240px;  /* Limite la largeur à 1440px */
+  margin: 0 auto;  /* Centre le contenu dans la page */
+}
+
+/****** Media queries ***********/
+
+/* Medium devices (table, less than 1240px) */
+
+@media (max-width: 1240px) {
+  .container {
+    max-width: 95%; /* Ajuste la largeur pour les tablettes */
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+
+@media (max-width: 760px) {
+  .container {
+    max-width: 100%; /* Pour mobiles */
+    padding: 0 10px; /* Ajoute un peu de padding pour éviter que le contenu touche les bords */
+  }
+
+}
