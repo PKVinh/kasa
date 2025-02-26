@@ -14,7 +14,6 @@
 .title p {
     font-size: 18px;
     font-weight: 500;
-    line-height: 25px;
 }
 
 .tags_container {
@@ -40,7 +39,7 @@
 .host_name {
     color: var(--main-color);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     flex-direction: column; /* Affiche Prénom et Nom en colonne */
     text-align: right;
 }
@@ -116,7 +115,7 @@ ul {
     }
 
     .title p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .host_container img {

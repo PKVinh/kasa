@@ -7,19 +7,16 @@
     background-color: var(--main-color);
     color: var(--main-img-text-color);
     border-radius: 10px;
+    font-weight: 600;
 }
 
-.tag p {
-    font-size: 14px;
-    font-weight: 700;
-}
 
 /****** Media queries ***********/
 /* Small devices (phones, less than 768px) */
 
 @media screen and (min-width: 330px) and (max-width: 768px) {
-    .tag p{
-        height: 18px;  
-        font-size: 10px;  
+    .tag {
+        height: 15px;  
+        font-size: 12px;  
     }
 }
