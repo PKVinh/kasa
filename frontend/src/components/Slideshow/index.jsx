@@ -14,7 +14,6 @@ function Slideshow({pictures}) {
     setIndex((nextIndex) => nextIndex === pictures.length - 1 ? 0 : nextIndex + 1)
   }
 
-
   return (
     <div className={styles.slideshow}>
 

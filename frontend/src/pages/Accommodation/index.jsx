@@ -35,6 +35,7 @@ const Accommodation = () => {
         }
 
       } catch (error) {
+        console.log(error)
         setError(error.message);
         // Redirige vers la page 404 en cas d'erreur
         navigate('/404', { replace: true });
@@ -42,14 +43,12 @@ const Accommodation = () => {
     };
 
     fetchData();
-  }, [id, navigate]);
+  });
 
   // Si les données sont encore en cours de chargement
   if (!accomodation && !error) {
     return <h1>Chargement...</h1>;
   }
-
-  const [firstName, lastName] = host.name.split(" ");
 
   // Si tout va bien, affiche les données
   return (
@@ -70,18 +69,29 @@ const Accommodation = () => {
         
         <div className={styles.host_container}>
           <div className={styles.host_info}>
-              <div className={styles.host_name}>
-                <p>{firstName}</p>
-                <p>{lastName}</p>
-              </div>
+
+          {host.name && (
+            <div className={styles.host_name}>
+              {(() => {
+                const [firstName, lastName] = host.name.split(" ");
+                return (
+                  <>
+                    <p>{firstName}</p>
+                    <p>{lastName}</p>
+                  </>
+                );
+              })()}
+            </div>
+          )}
             <img src={host.picture} alt={host.name}></img>
           </div>
+          
           <div className={styles.ratingContainer}>
             {[...Array(5)].map((_, index) => (
               <i
                 key={index}
                 className={`fa-solid fa-star ${
-                  index < rating ? styles.starred : styles.stargray
+                index < rating ? styles.starred : styles.stargray
                 }`}
               ></i>
             ))}
