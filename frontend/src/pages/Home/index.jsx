@@ -3,6 +3,8 @@ import Banner from "../../components/Banner"
 import bannerHome from "../../assets/home_banner.png"
 import Card from "../../components/Card"
 import styles from "./home.module.css"
+const apiUrl = import.meta.env.VITE_API_URL;
+
 
 function Home() {
     // Initialisation du state
@@ -10,7 +12,7 @@ function Home() {
 
     // Mise à jour du state
     useEffect( ()=>{
-        fetch("http://localhost:8080/api/properties")
+        fetch(`${apiUrl}/api/properties`)
         .then((response) => response.json())
         .then((datas) => {
             setAccomodations(datas)

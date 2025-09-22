@@ -4,7 +4,7 @@ import Collapse from "../../components/Collapse"
 import Slideshow from '../../components/Slideshow';
 import Tag from "../../components/Tag";
 import styles from "./Accomodation.module.css";
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const Accommodation = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -22,7 +22,7 @@ const Accommodation = () => {
     // Fonction de validation d'ID
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/properties/${id}`);
+        const response = await (`${apiUrl}/api/properties/${id}`);
         const result = await response.json();
         setAccomodation(result);
         setEquipments(result.equipments)
