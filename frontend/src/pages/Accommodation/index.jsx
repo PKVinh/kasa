@@ -22,7 +22,7 @@ const Accommodation = () => {
     // Fonction de validation d'ID
     const fetchData = async () => {
       try {
-        const response = await (`${apiUrl}/api/properties/${id}`);
+        const response = await fetch (`${apiUrl}/api/properties/${id}`);
         const result = await response.json();
         setAccomodation(result);
         setEquipments(result.equipments)
