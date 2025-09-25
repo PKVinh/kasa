@@ -7,7 +7,7 @@ function Error404() {
         <div className={styles.error_container}>
             <img src={error_banner} alt="error-404"></img>
             <p>Oups! La page que vous demandez n&apos;existe pas.</p>
-            <Link to="/" className={styles.link}>Retourner sur la page d&apos;acceuil</Link>
+            <Link to="/kasa" className={styles.link}>Retourner sur la page d&apos;acceuil</Link>
         </div>
     )
 }
